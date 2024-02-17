@@ -1,8 +1,8 @@
 import express from 'express';
 import sqlite3 from 'sqlite3';
-import bodyParser from 'body-parser';
+
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Create a sqlite database with a table Studente(Id, Nome, Cognome, DataNascita, Classe, Indirizzo, Cellulare). Id è chiave primaria.
 let db = new sqlite3.Database('Scuola.db', (err) => {
