@@ -1,0 +1,24 @@
+{
+  "name": "5aia_2024_nodeserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mceserani/5AIA_2024_NodeServer.git"
+  },
+  "author": "Matteo Ceserani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mceserani/5AIA_2024_NodeServer/issues"
+  },
+  "homepage": "https://github.com/mceserani/5AIA_2024_NodeServer#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.7"
+  },
+  "type": "module"
+}
