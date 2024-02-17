@@ -24,11 +24,13 @@ app.post('/insert', (req, res) => {
     let cellulare = data.cellulare;
     db.run(sql, [nome, cognome, dataNascita, classe, indirizzo, cellulare], function(err) {
         if (err) {
+            res.send('Errore! Non è stato possibile inserire i dati.');
             return console.error(err.message);
         }
         console.log(`Rows inserted ${this.changes}`);
+        res.send('Dati inseriti correttamente.');
     });
-    res.send('Inserimento completato');
+    
 });
 
 app.listen(3000, () => {
