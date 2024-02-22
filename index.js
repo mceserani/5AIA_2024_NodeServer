@@ -30,7 +30,17 @@ app.post('/insert', (req, res) => {
         console.log(`Rows inserted ${this.changes}`);
         res.send('Dati inseriti correttamente.');
     });
-    
+});
+
+app.get('/select/:id', (req, res) => {
+    let id = req.params.id;
+    db.get('SELECT * FROM Studente WHERE id = ?', [id], (err, row) => {
+        if (err) {
+            res.send('Errore! Non è stato possibile selezionare i dati.');
+            return console.error(err.message);
+        }
+        res.send(row);
+    });
 });
 
 app.listen(3000, () => {
